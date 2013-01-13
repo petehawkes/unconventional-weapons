@@ -16,6 +16,7 @@ Processing v2.0b7
 String liveTags[] = loadStrings("data/offline.html");
 
 
+
 String namePatternStart="<table cellpadding=\"1\"><tr><td colspan=\"2\" align=\"center\"><h2>";
 String namePatternEnd = "</h2>";
 
@@ -25,21 +26,43 @@ println("ANIMAL TYPES TRACKED");
 
 
 boolean nameFound = false;
-int nameIndex;
+int nameLine = 0;
+String animalType;
 
 for (int i = 0 ; i < liveTags.length; i++) {
   
-   nameIndex = liveTags[i].indexOf(namePatternStart);
-
   
+  if (nameFound) {
+    
+    int listEndIndex = liveTags[i].indexOf(listEnd);
+    if (listEndIndex != -1) {
+      
+       // 
+       for (int j=nameLine+3; j<i; j++) {
+         int len = liveTags[j].length();
+         println(trim(liveTags[j].substring(len-39, len-29)) + "," + trim(liveTags[j].substring(len-20, len-10)));
+       }
+      
+       nameFound = false;
+       
+    }
+    
+  } else {
+  
+    int nameIndex = liveTags[i].indexOf(namePatternStart);
+    nameLine = i;
+    
     if (nameIndex != -1) {
-      //nameFound = true;
+      nameFound = true;
       int startIndex = nameIndex + namePatternStart.length();
       int endIndex = liveTags[i].indexOf(namePatternEnd);
       println(liveTags[i].substring(startIndex, endIndex));
       
+      // skip the next two lines (table header, empty line);
+      i+=2;
+      
     }
-  
+  }
   
 }
 
