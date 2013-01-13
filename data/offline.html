@@ -1,0 +1,679 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<HEAD>
+   <title>TOPP: Near Real-time Animal Tracks   </title>
+<link rel="stylesheet" href="TOPP.css" type="text/css" />
+   <script language ="Javascript" type="text/javascript">
+<!-- Hide script from old browsers
+     if(document.images){
+       var currentSpecies = 0
+       var currentZone = 10
+       animaltext=new Array
+       regiontext=new Array
+       sst=new Array
+       regionImage=new Array
+       chla=new Array
+       zoneImage=new Array
+       ssh=new Array
+       mapName=new Array
+       speciesMap=new Array
+       speciesImage=new Array
+animaltext[0]="Roll mouse over end points to see animal and tag info. Click on end points or pttno in table for larger image"
+regiontext[0]="Roll mouse over end points to see animal and tag info. Click on end points or pttno in table for larger image"
+   sst[0]="avhrrnrt_recent_8day_010_sml.gif"
+   chla[0]="modisnrt_recent_8day_010_sml.gif"
+   regionImage[0]="zone_10_010.gif"
+   zoneImage[0]="zone_map0.gif"
+regiontext[ 1]="Click for more detailed view of this region"
+regionImage[ 1]="zone_01_010.gif"
+mapName[ 1]="#locations_01"
+zoneImage[ 1]="zone_map01.gif"
+regiontext[ 2]="Click for more detailed view of this region"
+regionImage[ 2]="zone_02_010.gif"
+mapName[ 2]="#locations_02"
+zoneImage[ 2]="zone_map02.gif"
+regiontext[ 3]="Click for more detailed view of this region"
+regionImage[ 3]="zone_03_010.gif"
+mapName[ 3]="#locations_03"
+zoneImage[ 3]="zone_map03.gif"
+regiontext[ 4]="Click for more detailed view of this region"
+regionImage[ 4]="zone_04_010.gif"
+mapName[ 4]="#locations_04"
+zoneImage[ 4]="zone_map04.gif"
+regiontext[ 5]="Click for more detailed view of this region"
+regionImage[ 5]="zone_05_010.gif"
+mapName[ 5]="#locations_05"
+zoneImage[ 5]="zone_map05.gif"
+regiontext[ 6]="Click for more detailed view of this region"
+regionImage[ 6]="zone_06_010.gif"
+mapName[ 6]="#locations_06"
+zoneImage[ 6]="zone_map06.gif"
+regiontext[ 7]="Click for more detailed view of this region"
+regionImage[ 7]="zone_07_010.gif"
+mapName[ 7]="#locations_07"
+zoneImage[ 7]="zone_map07.gif"
+regiontext[ 8]="Click for more detailed view of this region"
+regionImage[ 8]="zone_08_010.gif"
+mapName[ 8]="#locations_08"
+zoneImage[ 8]="zone_map08.gif"
+regiontext[ 9]="Click for more detailed view of this region"
+regionImage[ 9]="zone_09_010.gif"
+mapName[ 9]="#locations_09"
+zoneImage[ 9]="zone_map09.gif"
+regiontext[10]="Click for more detailed view of this region"
+regionImage[10]="zone_10_010.gif"
+mapName[10]="#locations_10"
+zoneImage[10]="zone_map10.gif"
+speciesImage[ 1]="all_010_sp01_current.gif"
+speciesMap[ 1]="#species_01"
+speciesImage[ 2]="all_010_sp02_current.gif"
+speciesMap[ 2]="#species_02"
+speciesImage[ 3]="all_010_sp03_current.gif"
+speciesMap[ 3]="#species_03"
+speciesImage[ 4]="all_010_sp04_current.gif"
+speciesMap[ 4]="#species_04"
+speciesImage[ 5]="all_010_sp05_current.gif"
+speciesMap[ 5]="#species_05"
+speciesImage[ 6]="all_010_sp06_current.gif"
+speciesMap[ 6]="#species_06"
+speciesImage[ 7]="all_010_sp07_current.gif"
+speciesMap[ 7]="#species_07"
+speciesImage[ 8]="all_010_sp08_current.gif"
+speciesMap[ 8]="#species_08"
+speciesImage[ 9]="all_010_sp09_current.gif"
+speciesMap[ 9]="#species_09"
+speciesImage[10]="all_010_sp10_current.gif"
+speciesMap[10]="#species_10"
+speciesImage[11]="all_010_sp11_current.gif"
+speciesMap[11]="#species_11"
+speciesImage[12]="all_010_sp12_current.gif"
+speciesMap[12]="#species_12"
+speciesImage[13]="all_010_sp13_current.gif"
+speciesMap[13]="#species_13"
+speciesImage[14]="all_010_sp14_current.gif"
+speciesMap[14]="#species_14"
+speciesImage[15]="all_010_sp15_current.gif"
+speciesMap[15]="#species_15"
+speciesImage[16]="all_010_sp16_current.gif"
+speciesMap[16]="#species_16"
+speciesImage[17]="all_010_sp17_current.gif"
+speciesMap[17]="#species_17"
+speciesImage[18]="all_010_sp18_current.gif"
+speciesMap[18]="#species_18"
+speciesImage[19]="all_010_sp19_current.gif"
+speciesMap[19]="#species_19"
+speciesImage[20]="all_010_sp20_current.gif"
+speciesMap[20]="#species_20"
+speciesImage[21]="all_010_sp21_current.gif"
+speciesMap[21]="#species_21"
+speciesImage[22]="all_010_sp22_current.gif"
+speciesMap[22]="#species_22"
+speciesImage[23]="all_010_sp23_current.gif"
+speciesMap[23]="#species_23"
+speciesImage[24]="all_010_sp24_current.gif"
+speciesMap[24]="#species_24"
+speciesImage[25]="all_010_sp25_current.gif"
+speciesMap[25]="#species_25"
+speciesImage[26]="all_010_sp26_current.gif"
+speciesMap[26]="#species_26"
+speciesImage[27]="all_010_sp27_current.gif"
+speciesMap[27]="#species_27"
+speciesImage[28]="all_010_sp28_current.gif"
+speciesMap[28]="#species_28"
+speciesImage[29]="all_010_sp29_current.gif"
+speciesMap[29]="#species_29"
+speciesImage[30]="all_010_sp30_current.gif"
+speciesMap[30]="#species_30"
+speciesImage[31]="all_010_sp31_current.gif"
+speciesMap[31]="#species_31"
+speciesImage[32]="all_010_sp32_current.gif"
+speciesMap[32]="#species_32"
+speciesImage[33]="all_010_sp33_current.gif"
+speciesMap[33]="#species_33"
+speciesImage[34]="all_010_sp34_current.gif"
+speciesMap[34]="#species_34"
+speciesImage[35]="all_010_sp35_current.gif"
+speciesMap[35]="#species_35"
+speciesImage[36]="all_010_sp36_current.gif"
+speciesMap[36]="#species_36"
+speciesImage[37]="all_010_sp37_current.gif"
+speciesMap[37]="#species_37"
+speciesImage[38]="all_010_sp38_current.gif"
+speciesMap[38]="#species_38"
+speciesImage[39]="all_010_sp39_current.gif"
+speciesMap[39]="#species_39"
+speciesImage[40]="all_010_sp40_current.gif"
+speciesMap[40]="#species_40"
+speciesImage[41]="all_010_sp41_current.gif"
+speciesMap[41]="#species_41"
+speciesImage[42]="all_010_sp42_current.gif"
+speciesMap[42]="#species_42"
+speciesImage[43]="all_010_sp43_current.gif"
+speciesMap[43]="#species_43"
+speciesImage[44]="all_010_sp44_current.gif"
+speciesMap[44]="#species_44"
+speciesImage[45]="all_010_sp45_current.gif"
+speciesMap[45]="#species_45"
+speciesImage[46]="all_010_sp46_current.gif"
+speciesMap[46]="#species_46"
+speciesImage[47]="all_010_sp47_current.gif"
+speciesMap[47]="#species_47"
+speciesImage[48]="all_010_sp48_current.gif"
+speciesMap[48]="#species_48"
+speciesImage[49]="all_010_sp49_current.gif"
+speciesMap[49]="#species_49"
+speciesImage[50]="all_010_sp50_current.gif"
+speciesMap[50]="#species_50"
+speciesImage[51]="all_010_sp51_current.gif"
+speciesMap[51]="#species_51"
+speciesImage[52]="all_010_sp52_current.gif"
+speciesMap[52]="#species_52"
+speciesImage[53]="all_010_sp53_current.gif"
+speciesMap[53]="#species_53"
+speciesImage[54]="all_010_sp54_current.gif"
+speciesMap[54]="#species_54"
+speciesImage[55]="all_010_sp55_current.gif"
+speciesMap[55]="#species_55"
+speciesImage[56]="all_010_sp56_current.gif"
+speciesMap[56]="#species_56"
+speciesImage[57]="all_010_sp57_current.gif"
+speciesMap[57]="#species_57"
+speciesImage[58]="all_010_sp58_current.gif"
+speciesMap[58]="#species_58"
+speciesImage[59]="all_010_sp59_current.gif"
+speciesMap[59]="#species_59"
+speciesImage[60]="all_010_sp60_current.gif"
+speciesMap[60]="#species_60"
+speciesImage[61]="all_010_sp61_current.gif"
+speciesMap[61]="#species_61"
+speciesImage[62]="all_010_sp62_current.gif"
+speciesMap[62]="#species_62"
+speciesImage[63]="all_010_sp63_current.gif"
+speciesMap[63]="#species_63"
+speciesImage[64]="all_010_sp64_current.gif"
+speciesMap[64]="#species_64"
+speciesImage[65]="all_010_sp65_current.gif"
+speciesMap[65]="#species_65"
+      animaltext[  1]="Salmon Shark                       96369 1710021  20 Jul 2010 to 13 Jan 2013" 
+       sst[  1]="salmonShark_96369_1710021_ssta.gif" 
+       chla[  1]="salmonShark_96369_1710021_chla.gif" 
+       ssh[  1]="salmonShark_96369_1710021_sshd.gif" 
+      animaltext[  2]="Salmon Shark                       87552 1710012  17 Jul 2010 to 13 Jan 2013" 
+       sst[  2]="salmonShark_87552_1710012_ssta.gif" 
+       chla[  2]="salmonShark_87552_1710012_chla.gif" 
+       ssh[  2]="salmonShark_87552_1710012_sshd.gif" 
+      animaltext[  3]="Northern Elephant Seal             34252 2011011  31 Dec 2011 to 13 Jan 2013" 
+       sst[  3]="elephantSeal_34252_2011011_ssta.gif" 
+       chla[  3]="elephantSeal_34252_2011011_chla.gif" 
+       ssh[  3]="elephantSeal_34252_2011011_sshd.gif" 
+      animaltext[  4]="Northern Elephant Seal             101168 2011007   2 Aug 2011 to 12 Jan 2013" 
+       sst[  4]="elephantSeal_101168_2011007_ssta.gif" 
+       chla[  4]="elephantSeal_101168_2011007_chla.gif" 
+       ssh[  4]="elephantSeal_101168_2011007_sshd.gif" 
+      animaltext[  5]="Northern Elephant Seal             101164 2011006   2 Aug 2011 to 13 Jan 2013" 
+       sst[  5]="elephantSeal_101164_2011006_ssta.gif" 
+       chla[  5]="elephantSeal_101164_2011006_chla.gif" 
+       ssh[  5]="elephantSeal_101164_2011006_sshd.gif" 
+      animaltext[  6]="Northern Elephant Seal             101165 2011004   2 Aug 2011 to 13 Jan 2013" 
+       sst[  6]="elephantSeal_101165_2011004_ssta.gif" 
+       chla[  6]="elephantSeal_101165_2011004_chla.gif" 
+       ssh[  6]="elephantSeal_101165_2011004_sshd.gif" 
+      animaltext[  7]="Northern Elephant Seal             101170 2011003   2 Aug 2011 to 11 Jan 2013" 
+       sst[  7]="elephantSeal_101170_2011003_ssta.gif" 
+       chla[  7]="elephantSeal_101170_2011003_chla.gif" 
+       ssh[  7]="elephantSeal_101170_2011003_sshd.gif" 
+      animaltext[  8]="Salmon Shark                       109090 1712001  19 Jul 2012 to 12 Jan 2013" 
+       sst[  8]="salmonShark_109090_1712001_ssta.gif" 
+       chla[  8]="salmonShark_109090_1712001_chla.gif" 
+       ssh[  8]="salmonShark_109090_1712001_sshd.gif" 
+      animaltext[  9]="Northern Elephant Seal             115465 2011801  16 Feb 2012 to  6 Jan 2013" 
+       sst[  9]="elephantSeal_115465_2011801_ssta.gif" 
+       chla[  9]="elephantSeal_115465_2011801_chla.gif" 
+       ssh[  9]="elephantSeal_115465_2011801_sshd.gif" 
+      animaltext[ 10]="Shortfin Mako Shark                120725 1512002   9 Jul 2012 to 13 Jan 2013" 
+       sst[ 10]="makoShark_120725_1512002_ssta.gif" 
+       chla[ 10]="makoShark_120725_1512002_chla.gif" 
+       ssh[ 10]="makoShark_120725_1512002_sshd.gif" 
+      animaltext[ 11]="Shortfin Mako Shark                120724 1512003  12 Jul 2012 to 11 Jan 2013" 
+       sst[ 11]="makoShark_120724_1512003_ssta.gif" 
+       chla[ 11]="makoShark_120724_1512003_chla.gif" 
+       ssh[ 11]="makoShark_120724_1512003_sshd.gif" 
+      animaltext[ 12]="Shortfin Mako Shark                120686 1512004  13 Jul 2012 to 13 Jan 2013" 
+       sst[ 12]="makoShark_120686_1512004_ssta.gif" 
+       chla[ 12]="makoShark_120686_1512004_chla.gif" 
+       ssh[ 12]="makoShark_120686_1512004_sshd.gif" 
+      animaltext[ 13]="Salmon Shark                       109092 1712003  29 Jul 2012 to 12 Jan 2013" 
+       sst[ 13]="salmonShark_109092_1712003_ssta.gif" 
+       chla[ 13]="salmonShark_109092_1712003_chla.gif" 
+       ssh[ 13]="salmonShark_109092_1712003_sshd.gif" 
+      animaltext[ 14]="Blue Shark                         88513 1612004  15 Jul 2012 to 11 Jan 2013" 
+       sst[ 14]="blueShark_88513_1612004_ssta.gif" 
+       chla[ 14]="blueShark_88513_1612004_chla.gif" 
+       ssh[ 14]="blueShark_88513_1612004_sshd.gif" 
+}
+else {
+regionImage[ 0]=""
+zoneImage[ 0]=""
+regionImage[ 1]=""
+zoneImage[ 1]=""
+regionImage[ 2]=""
+zoneImage[ 2]=""
+regionImage[ 3]=""
+zoneImage[ 3]=""
+regionImage[ 4]=""
+zoneImage[ 4]=""
+regionImage[ 5]=""
+zoneImage[ 5]=""
+regionImage[ 6]=""
+zoneImage[ 6]=""
+regionImage[ 7]=""
+zoneImage[ 7]=""
+regionImage[ 8]=""
+zoneImage[ 8]=""
+regionImage[ 9]=""
+zoneImage[ 9]=""
+regionImage[10]=""
+zoneImage[10]=""
+      animaltext[  1]=""
+       sst[  1]=""
+       chla[  1]=""
+       ssh[  1]=""
+      animaltext[  2]=""
+       sst[  2]=""
+       chla[  2]=""
+       ssh[  2]=""
+      animaltext[  3]=""
+       sst[  3]=""
+       chla[  3]=""
+       ssh[  3]=""
+      animaltext[  4]=""
+       sst[  4]=""
+       chla[  4]=""
+       ssh[  4]=""
+      animaltext[  5]=""
+       sst[  5]=""
+       chla[  5]=""
+       ssh[  5]=""
+      animaltext[  6]=""
+       sst[  6]=""
+       chla[  6]=""
+       ssh[  6]=""
+      animaltext[  7]=""
+       sst[  7]=""
+       chla[  7]=""
+       ssh[  7]=""
+      animaltext[  8]=""
+       sst[  8]=""
+       chla[  8]=""
+       ssh[  8]=""
+      animaltext[  9]=""
+       sst[  9]=""
+       chla[  9]=""
+       ssh[  9]=""
+      animaltext[ 10]=""
+       sst[ 10]=""
+       chla[ 10]=""
+       ssh[ 10]=""
+      animaltext[ 11]=""
+       sst[ 11]=""
+       chla[ 11]=""
+       ssh[ 11]=""
+      animaltext[ 12]=""
+       sst[ 12]=""
+       chla[ 12]=""
+       ssh[ 12]=""
+      animaltext[ 13]=""
+       sst[ 13]=""
+       chla[ 13]=""
+       ssh[ 13]=""
+      animaltext[ 14]=""
+       sst[ 14]=""
+       chla[ 14]=""
+       ssh[ 14]=""
+}
+
+//end hiding script from old browsers -->
+</script>
+<script language="JavaScript" src="TOPPfunctions.js"></script>
+</HEAD>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#336699" alink="#336699" vlink="#336699" topmargin="0">
+<map name="banner_links">
+<Area shape ="rect" coords="675,15,775,55" href="http://www.coml.org" alt="TOPP is part of the Census of Marine Life"/>
+<Area shape ="rect" coords="0,15,400,55" href="http://www.toppcensus.org" alt="TOPP Home Page"/>
+</map>
+<map name="zones">
+ <Area shape="poly" coords="238, 37,238, 98,295,100,260, 67,264, 39" href="javascript:zoneView        ( 1)" onClick="this.blur()" onmouseover="showZone                         ( 1);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords="273, 71,285, 80" href="javascript:zoneView        ( 2)" onClick="this.blur()" onmouseover="showZone                         ( 2);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords="263, 60,274, 69" href="javascript:zoneView        ( 3)" onClick="this.blur()" onmouseover="showZone                         ( 3);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords="255,116,361,231" href="javascript:zoneView        ( 4)" onClick="this.blur()" onmouseover="showZone                         ( 4);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords=" 68,  6,150,110" href="javascript:zoneView        ( 5)" onClick="this.blur()" onmouseover="showZone                         ( 5);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="poly" coords=" 68,145, 68,243,255,241,253,211,151,208,149,145" href="javascript:zoneView        ( 6)" onClick="this.blur()" onmouseover="showZone                         ( 6);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords="156, 58,228,134" href="javascript:zoneView        ( 7)" onClick="this.blur()" onmouseover="showZone                         ( 7);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="poly" coords=" 33,  6,150, 56,228, 56,228,136,151,135,151,206,254,208,253,194,237,100,236, 34,253, 33" href="javascript:zoneView        ( 8)" onClick="this.blur()" onmouseover="showZone                         ( 8);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords=" 25,  3, 66,241" href="javascript:zoneView        ( 9)" onClick="this.blur()" onmouseover="showZone                         ( 9);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+ <Area shape="rect" coords="  0,  0,  0,  0" href="javascript:zoneView        (10)" onClick="this.blur()" onmouseover="showZone                         (10);window.status='Zoom in on this region';return                       true" onmouseout="showZone(0); window.status='';return                     true"/>
+</map>
+   <table border="0" cellpadding="0" cellspacing="0">
+<tr><td rowspan="5" bgcolor="#336699" width="100" valign="top">
+<table cellpadding="5" cellspacing="0" border="0">
+   <tr><td><i><span class="wt">
+Last Update: Sun Jan 13 03:22:49 2013</span></i><hr></td></tr>
+<tr><td nowrap><span class="wtll">
+<b>View by Zones: </b></span><br>
+<a href="javascript:zoneView( 1)"  onmouseover= "showZone( 1);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">CA Current               </span></a><br>
+<a href="javascript:zoneView( 2)"  onmouseover= "showZone( 2);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Pt. Conception           </span></a><br>
+<a href="javascript:zoneView( 3)"  onmouseover= "showZone( 3);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Monterey Bay             </span></a><br>
+<a href="javascript:zoneView( 4)"  onmouseover= "showZone( 4);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">E.Equatorial             </span></a><br>
+<a href="javascript:zoneView( 5)"  onmouseover= "showZone( 5);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">N.Pacific                </span></a><br>
+<a href="javascript:zoneView( 6)"  onmouseover= "showZone( 6);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">S.Pacific                </span></a><br>
+<a href="javascript:zoneView( 7)"  onmouseover= "showZone( 7);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Hawaii                   </span></a><br>
+<a href="javascript:zoneView( 8)"  onmouseover= "showZone( 8);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Eastern Pacific          </span></a><br>
+<a href="javascript:zoneView( 9)"  onmouseover= "showZone( 9);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Pacific                  </span></a><br>
+<a href="javascript:zoneView(10)"  onmouseover= "showZone(10);window.status='Zoom in on this region'; return true" onmouseout="showZone(0);window.status='';return true"/><span class="wt">Full Region              </span></a><br>
+<hr><span class="wtll"><b>View by Species:</b></span><br>
+<a href="javascript:bigWindow('recentgifs/all_010_gr1_current.gif')"><span class="wt"><b>Sharks              </b></span></a><br>
+<a href="javascript:speciesView( 3)"/><span class="wt">&nbsp;Salmon Shark              </span></a><br>
+<a href="javascript:speciesView( 2)"/><span class="wt">&nbsp;Shortfin Mako Shark       </span></a><br>
+<a href="javascript:speciesView( 1)"/><span class="wt">&nbsp;Blue Shark                </span></a><br>
+<a href="javascript:bigWindow('recentgifs/all_010_gr2_current.gif')"><span class="wt"><b>Pinnipeds           </b></span></a><br>
+<a href="javascript:speciesView( 6)"/><span class="wt">&nbsp;Northern Elephant Seal    </span></a><br>
+<a href="TOPP_tracks010.html"><span class="wt"><b>All Species</b></span></a>
+  <hr><span class="wt">Tags reporting within<br> the last:</span>
+     <br><a href="javascript:newDayno('010')"><b><span class="wt">10 days</span></b></a>
+     <br><a href="javascript:newDayno('060')"><b><span class="wt">60 days</span></b></a>
+     <br><a href="javascript:newDayno('180')"><b><span class="wt">180 days</span></b></a>
+     <br><a href="javascript:newDayno('365')"><b><span class="wt">365 days</span></b></a>
+<hr><b><span class="wt">TOPP Tags</span></b><br><a href="../TOPP/TOPP_tracks.html" alt="TOPP_tracks">
+<span class="wt">&nbsp;Tracks</span></a></a><br><a href="../TOPP/popups.html" alt="TOPP Pop-up tags">
+<span class="wt">&nbsp;Pop-ups</span></a><hr><b><span class="wt">TOPP Partner Tags</span></b>
+<br><a href="../nonTOPPtags" alt="TOPP Partner tags">
+<span class="wt">&nbsp;Tracks</span></a>
+<br><a href="../nonTOPPtags/popups.html" alt="Pop-up tags">
+<span class="wt">&nbsp;Pop-ups</span></a><hr><a href="../TOPP/browse.html" alt="TOPP_tracks">
+<span class="wt"><b>Browse all tracks</b></span></a><hr><a href="TOPP_env_data_info.html" alt="Environmental Data Information"><span class="wt"><b>Environmental Data<br>Information</b></span></a><hr><a href="http://www.toppcensus.org/web/Background/partners.aspx" alt="TOPP Partners" target="_window"><span class="wt"><b>TOPP Partners</b></span></a>  </td></tr>
+  </table>
+</td>
+<td colspan="2" valign="top">
+<table width="100%" cellpadding="0"
+ cellspacing="0" border="0"><tr><td><img src=
+"TOPP_recent_nologo_bar.gif" usemap="#banner_links" border="0"></td><td bgcolor="#336699"
+ width="100%"></td></tr></table></td></tr>
+<tr><td align="center"><h3>Tags reporting within the last  10 days</h3>
+<form name="animalinfo" action="#">
+<textarea rows="2" cols="60" name="trackinfo" 
+readonly="readonly">   Roll mouse over end points to see animal and tag info
+        Click for larger image  </textarea>  </form></td>
+ <td align="center"><table border="1" bordercolor="#336699"
+ cellpadding="5"><tr><td align="center"><span class="bt">
+ <i>This tag information is for viewing only.</i>
+ <br>Please obtain <a href="javascript:shortPolicyWindow()">
+<b>permission to use</b></span></a></td></tr></table></td>
+</tr><tr><td rowspan="2"> <img src="zone_10_010.gif" border="0" align="left" name="zoneMap"  usemap="#locations_10" height=" 516" width="  492"  onerror="alert('no animals in that category');history.back()"></td><td width=" 367" height=" 252" border="0" cellpadding="0">  <table background="zone_map.gif" width=" 367" height=" 252" border="0" cellpadding="0" cellspacing="0"><tr><td border="0" width=" 367" height=" 252" cellpadding="0"><img src="zone_map0.gif" width=" 367" height=" 252" name="zoneHilight" usemap="#zones" border="0"
+ background=" ">  </td></tr>
+<form name="get">
+<input type="hidden" name="pars">
+</form>
+<script language="javascript">
+var locate=window.location
+document.get.pars.value=locate
+var pars= document.get.pars.value
+function getInitSpecies(str){
+theleft = str.indexOf("=");
+if (theleft < 0){
+return(0);
+}
+else {
+theright = str.lastIndexOf("&");
+return(str.substring(theleft+1,theright));
+}
+}
+var initSpecies=getInitSpecies(pars)
+function getInitZone(str){
+theleft = str.lastIndexOf("=");
+if (theleft < 0){
+return(10);
+}
+else {
+theright = str.length;
+return(str.substring(theleft+1,theright));
+}
+}
+var initZone=getInitZone(pars)
+if (initSpecies != 0){
+speciesView(initSpecies);
+}
+else{
+zoneView(initZone);
+}
+</script></table></td>
+</tr><tr><td align="center"><table cellpadding="0">
+<tr><td align="center">Sea Surface Temperature<br><a href="javascript:bigWindow('recentgifs/avhrrnrt_recent_8day_010_big.gif')"><img src="recentgifs/avhrrnrt_recent_8day_010_sml.gif" name="sst" height="195"
+ width="186" border=0 alt="Sorry, SST is not available" title="SST at most recent position"></a></td><td align="center">Chlorophyll-<i>a</i><br><a href="javascript:bigWindow('recentgifs/modisnrt_recent_8day_010_big.gif')"><img src="recentgifs/modisnrt_recent_8day_010_sml.gif" name="chla" height="195" width="186" border=0 alt="Sorry, Chlorophyll-a is not available" title="Chlorophyll-a at most recent position"></a></td></tr></table></td></tr><tr><td colspan="2" valign="top">
+ <map name="locations_01">
+         <Area shape="circle" coords=" 156, 206,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 275, 215,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 181, 197,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 230, 232,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 255, 194,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords="  65, 189,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 365, 424,5" href="javascript:zoomedWindow( 10)"  onmouseover="showInfo( 10);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 394, 401,5" href="javascript:zoomedWindow( 11)"  onmouseover="showInfo( 11);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 363, 488,5" href="javascript:zoomedWindow( 12)"  onmouseover="showInfo( 12);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 251, 240,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 333, 496,5" href="javascript:zoomedWindow( 14)"  onmouseover="showInfo( 14);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="locations_02">
+ </map>
+ <map name="locations_03">
+         <Area shape="circle" coords=" 369, 191,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords="  96, 292,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 246,  66,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 221, 338,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="locations_04">
+ </map>
+ <map name="locations_05">
+         <Area shape="circle" coords=" 388, 103,5" href="javascript:zoomedWindow(  1)"  onmouseover="showInfo(  1);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 332,  44,5" href="javascript:zoomedWindow(  2)"  onmouseover="showInfo(  2);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 445, 155,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 481, 158,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 453, 152,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 467, 164,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 475, 151,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 393,  80,5" href="javascript:zoomedWindow(  8)"  onmouseover="showInfo(  8);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 418, 149,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 473, 166,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="locations_06">
+ </map>
+ <map name="locations_07">
+ </map>
+ <map name="locations_08">
+         <Area shape="circle" coords=" 214,  96,5" href="javascript:zoomedWindow(  1)"  onmouseover="showInfo(  1);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 156,  41,5" href="javascript:zoomedWindow(  2)"  onmouseover="showInfo(  2);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 274, 144,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 311, 147,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 282, 141,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 297, 152,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 304, 140,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 219,  74,5" href="javascript:zoomedWindow(  8)"  onmouseover="showInfo(  8);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 245, 139,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 339, 213,5" href="javascript:zoomedWindow( 10)"  onmouseover="showInfo( 10);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 348, 205,5" href="javascript:zoomedWindow( 11)"  onmouseover="showInfo( 11);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 338, 233,5" href="javascript:zoomedWindow( 12)"  onmouseover="showInfo( 12);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 303, 154,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 329, 235,5" href="javascript:zoomedWindow( 14)"  onmouseover="showInfo( 14);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="locations_09">
+         <Area shape="circle" coords=" 314,  61,5" href="javascript:zoomedWindow(  1)"  onmouseover="showInfo(  1);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 279,  26,5" href="javascript:zoomedWindow(  2)"  onmouseover="showInfo(  2);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 349,  91,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 372,  93,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 354,  90,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 363,  97,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 368,  89,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 317,  47,5" href="javascript:zoomedWindow(  8)"  onmouseover="showInfo(  8);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 332,  88,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 389, 135,5" href="javascript:zoomedWindow( 10)"  onmouseover="showInfo( 10);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 394, 130,5" href="javascript:zoomedWindow( 11)"  onmouseover="showInfo( 11);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 388, 148,5" href="javascript:zoomedWindow( 12)"  onmouseover="showInfo( 12);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 367,  98,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 383, 150,5" href="javascript:zoomedWindow( 14)"  onmouseover="showInfo( 14);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="locations_10">
+         <Area shape="circle" coords=" 275,  46,5" href="javascript:zoomedWindow(  1)"  onmouseover="showInfo(  1);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 250,  19,5" href="javascript:zoomedWindow(  2)"  onmouseover="showInfo(  2);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 300,  69,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 316,  71,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 303,  68,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 310,  73,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 313,  67,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 277,  35,5" href="javascript:zoomedWindow(  8)"  onmouseover="showInfo(  8);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 288,  67,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 328, 102,5" href="javascript:zoomedWindow( 10)"  onmouseover="showInfo( 10);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 332,  99,5" href="javascript:zoomedWindow( 11)"  onmouseover="showInfo( 11);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 328, 112,5" href="javascript:zoomedWindow( 12)"  onmouseover="showInfo( 12);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 313,  74,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 324, 113,5" href="javascript:zoomedWindow( 14)"  onmouseover="showInfo( 14);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="species_01">
+         <Area shape="circle" coords=" 324, 315,5" href="javascript:zoomedWindow( 14)"  onmouseover="showInfo( 14);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="species_02">
+         <Area shape="circle" coords=" 398, 338,5" href="javascript:zoomedWindow( 10)"  onmouseover="showInfo( 10);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 414, 323,5" href="javascript:zoomedWindow( 11)"  onmouseover="showInfo( 11);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 397, 381,5" href="javascript:zoomedWindow( 12)"  onmouseover="showInfo( 12);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="species_03">
+         <Area shape="circle" coords=" 244, 188,5" href="javascript:zoomedWindow(  1)"  onmouseover="showInfo(  1);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 151,  68,5" href="javascript:zoomedWindow(  2)"  onmouseover="showInfo(  2);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 252, 141,5" href="javascript:zoomedWindow(  8)"  onmouseover="showInfo(  8);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 386, 318,5" href="javascript:zoomedWindow( 13)"  onmouseover="showInfo( 13);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+ <map name="species_06">
+         <Area shape="circle" coords=" 360, 270,5" href="javascript:zoomedWindow(  3)"  onmouseover="showInfo(  3);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 412, 277,5" href="javascript:zoomedWindow(  4)"  onmouseover="showInfo(  4);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 371, 265,5" href="javascript:zoomedWindow(  5)"  onmouseover="showInfo(  5);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 392, 288,5" href="javascript:zoomedWindow(  6)"  onmouseover="showInfo(  6);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 403, 263,5" href="javascript:zoomedWindow(  7)"  onmouseover="showInfo(  7);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+         <Area shape="circle" coords=" 322, 260,5" href="javascript:zoomedWindow(  9)"  onmouseover="showInfo(  9);window.status='Click for larger images';return true" onmouseout="showInfo(0);window.status='';return true"/>
+
+ </map>
+<hr align="left"><table><tr><td><table border="1" cellspacing="0" cellpadding="3"><tr><td bgcolor="#336699" width="180">
+<a href="species"><span class="wt">
+<b>TOPP RESEARCHER ZONE</b></span></a></td></tr></table></td>
+<td width="450" align="center"><h2>Deployment Information:</h2></td></tr></table><table width="800" ><tr><td align="center">
+<table cellpadding="1"><tr><td colspan="2" align="center"><h2>Blue Shark</h2></td></tr></td><td><a href="javascript:speciesWindow('01')" onmouseover="window.status='View all for this species';return true" onmouseout="window.status='';return true">Browse </a>all daily images (animations, slides)</td></tr></table>
+<table border=1 cellpadding="5"><tr><td>TOPP ID</td><td>ptt number</td><td>Year</td><td>Mon</td><td> Day</td><td>Lon</td><td>Lat</td></tr>
+
+<tr><td>1612004</td><td><a href="javascript:zoomedWindow( 14)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">88513</a></td><td> 2012</td><td align="right">  7</td><td align="right"> 15</td><td>    -119.1</td><td>      33.8</td></tr>
+ </table>
+<table cellpadding="1"><tr><td colspan="2" align="center"><h2>Shortfin Mako Shark</h2></td></tr></td><td><a href="javascript:speciesWindow('02')" onmouseover="window.status='View all for this species';return true" onmouseout="window.status='';return true">Browse </a>all daily images (animations, slides)</td></tr></table>
+<table border=1 cellpadding="5"><tr><td>TOPP ID</td><td>ptt number</td><td>Year</td><td>Mon</td><td> Day</td><td>Lon</td><td>Lat</td></tr>
+
+<tr><td>1512002</td><td><a href="javascript:zoomedWindow( 10)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">120725</a></td><td> 2012</td><td align="right">  7</td><td align="right">  9</td><td>    -118.7</td><td>      32.9</td></tr>
+<tr><td>1512003</td><td><a href="javascript:zoomedWindow( 11)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">120724</a></td><td> 2012</td><td align="right">  7</td><td align="right"> 12</td><td>    -119.6</td><td>      33.9</td></tr>
+<tr><td>1512004</td><td><a href="javascript:zoomedWindow( 12)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">120686</a></td><td> 2012</td><td align="right">  7</td><td align="right"> 13</td><td>    -119.4</td><td>      34.0</td></tr>
+ </table>
+<table cellpadding="1"><tr><td colspan="2" align="center"><h2>Salmon Shark</h2></td></tr></td><td><a href="javascript:speciesWindow('03')" onmouseover="window.status='View all for this species';return true" onmouseout="window.status='';return true">Browse </a>all daily images (animations, slides)</td></tr></table>
+<table border=1 cellpadding="5"><tr><td>TOPP ID</td><td>ptt number</td><td>Year</td><td>Mon</td><td> Day</td><td>Lon</td><td>Lat</td></tr>
+
+<tr><td>1710021</td><td><a href="javascript:zoomedWindow(  1)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">96369</a></td><td> 2010</td><td align="right">  7</td><td align="right"> 20</td><td>    -146.5</td><td>      60.6</td></tr>
+<tr><td>1710012</td><td><a href="javascript:zoomedWindow(  2)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">87552</a></td><td> 2010</td><td align="right">  7</td><td align="right"> 17</td><td>    -146.1</td><td>      60.8</td></tr>
+<tr><td>1712001</td><td><a href="javascript:zoomedWindow(  8)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">109090</a></td><td> 2012</td><td align="right">  7</td><td align="right"> 19</td><td>    -145.7</td><td>      60.6</td></tr>
+<tr><td>1712003</td><td><a href="javascript:zoomedWindow( 13)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">109092</a></td><td> 2012</td><td align="right">  7</td><td align="right"> 29</td><td>    -146.1</td><td>      60.8</td></tr>
+ </table>
+<table cellpadding="1"><tr><td colspan="2" align="center"><h2>Northern Elephant Seal</h2></td></tr></td><td><a href="javascript:speciesWindow('06')" onmouseover="window.status='View all for this species';return true" onmouseout="window.status='';return true">Browse </a>all daily images (animations, slides)</td></tr></table>
+<table border=1 cellpadding="5"><tr><td>TOPP ID</td><td>ptt number</td><td>Year</td><td>Mon</td><td> Day</td><td>Lon</td><td>Lat</td></tr>
+
+<tr><td>2011011</td><td><a href="javascript:zoomedWindow(  3)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">34252</a></td><td> 2011</td><td align="right"> 12</td><td align="right"> 31</td><td>    -122.1</td><td>      36.9</td></tr>
+<tr><td>2011007</td><td><a href="javascript:zoomedWindow(  4)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">101168</a></td><td> 2011</td><td align="right">  8</td><td align="right">  2</td><td>    -164.1</td><td>      43.3</td></tr>
+<tr><td>2011006</td><td><a href="javascript:zoomedWindow(  5)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">101164</a></td><td> 2011</td><td align="right">  8</td><td align="right">  2</td><td>    -127.6</td><td>      47.1</td></tr>
+<tr><td>2011004</td><td><a href="javascript:zoomedWindow(  6)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">101165</a></td><td> 2011</td><td align="right">  8</td><td align="right">  2</td><td>    -161.4</td><td>      45.5</td></tr>
+<tr><td>2011003</td><td><a href="javascript:zoomedWindow(  7)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">101170</a></td><td> 2011</td><td align="right">  8</td><td align="right">  2</td><td>    -164.9</td><td>      47.1</td></tr>
+<tr><td>2011801</td><td><a href="javascript:zoomedWindow(  9)" onmouseover="window.status='View track for this animal' ;return true" onmouseout="window.status='';return true">115465</a></td><td> 2012</td><td align="right">  2</td><td align="right"> 16</td><td>    -122.4</td><td>      37.1</td></tr>
+ </table>
+ </td></tr></table>
+</body></html>
